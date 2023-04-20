@@ -1,0 +1,418 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Work Sans", sans-serif;
+}
+
+img {
+  width: 55%;
+  height: 90%;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  background: white;
+}
+
+section {
+  height: auto;
+  width: 100%;
+}
+
+footer {
+  height: fit-content;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+}
+
+a {
+  color: black;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+a:hover {
+  background: black;
+  color: white;
+}
+
+li {
+  text-decoration: none;
+}
+
+form {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  height: 50px;
+  width: 80vw;
+  margin: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: whitesmoke;
+}
+input[type="text"]:hover {
+  background: black;
+  color: white;
+}
+
+input[type="email"] {
+  height: 50px;
+  width: 80vw;
+  margin: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: whitesmoke;
+}
+input[type="email"]:hover {
+  background: black;
+  color: white;
+}
+
+input[type="submit"] {
+  height: 3rem;
+  width: 80vw;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+input[type="submit"]:hover {
+  background: black;
+  color: white;
+}
+
+#introduction {
+  height: 90vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  line-height: 60px;
+}
+
+.introduction-info {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50vw;
+  height: 80%;
+  margin-top: 50px;
+  font-size: 110%;
+  border-top: 1px solid orangered;
+  border-bottom: 1px solid orangered;
+}
+
+.lg {
+  color: rgb(255, 55, 0);
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  border: 1px solid black;
+  background: black;
+  margin: 50px;
+  opacity: 0.7;
+}
+
+.md {
+  font-size: 4rem;
+  text-align: right;
+  margin-right: 20px;
+  line-height: 45px;
+}
+
+.md-2 {
+  font-size: 1.8rem;
+  margin-left: 4rem;
+  border-left: 10px solid orangered;
+}
+
+.about {
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 3rem;
+}
+
+.about-title {
+  font-size: 6rem;
+}
+
+.avatar {
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 5px solid orangered;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu-item {
+  padding: 30px;
+}
+
+.projects {
+  padding: 10px;
+}
+
+.projects > h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.project-1 {
+  display: flex;
+  height: 100vh;
+}
+
+.project-2 {
+  display: flex;
+  flex-flow: row-reverse;
+  height: 100vh;
+}
+.project-3 {
+  display: flex;
+  height: 100vh;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+.info-title {
+  color: grey;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.info-para {
+  color: grey;
+  font-size: 1.1rem;
+  text-align: justify;
+  padding: 2rem;
+  width: 100%;
+}
+
+.btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="text"] {
+  border: 1px solid black;
+  background: white;
+}
+input[type="email"] {
+  border: 1px solid black;
+  background: white;
+}
+
+button {
+  height: 30px;
+  width: fit-content;
+  padding: 20px;
+  background: black;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 3px 2px black;
+  transition: all 0.4s ease-in-out;
+}
+
+.email,
+.github,
+.linkedin {
+  height: 100px;
+  width: 100px;
+}
+@media screen and (max-width: 1100px) {
+  .avatar {
+    display: none;
+    object-fit: cover;
+  }
+  .about-title {
+    text-align: center;
+    width: 90vw;
+    display: none;
+  }
+
+  .introduction-info {
+    width: 70vw;
+  }
+
+  .story {
+    height: fit-content;
+    width: 90vw;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .about {
+    display: none;
+  }
+  img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .projects {
+    padding-top: 100px;
+  }
+  .project-1 {
+    height: 100%;
+  }
+  .project-2 {
+    height: 100%;
+    padding-bottom: 30px;
+  }
+  .project-3 {
+    height: 100%;
+  }
+  footer {
+    background: whitesmoke;
+  }
+  input[type="text"] {
+    border: 1px solid black;
+    background: white;
+  }
+  input[type="email"] {
+    border: 1px solid black;
+    background: white;
+  }
+}
+@media screen and (max-width: 700px) {
+  .introduction-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .project-1,
+  .project-2,
+  .project-3 {
+    margin-bottom: 50px;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+  }
+  .story {
+    min-width: 300px;
+  }
+
+  .project-2 {
+    background: whitesmoke;
+  }
+
+  .about {
+    display: none;
+  }
+  .about-title {
+    font-size: 3rem;
+    display: none;
+  }
+  .hide {
+    display: block;
+  }
+  .avatar {
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  a {
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    text-decoration: overline;
+    color: rgb(123, 117, 117);
+    font-size: 16px;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 10px;
+  }
+
+  footer {
+    background: whitesmoke;
+    height: 100vh;
+  }
+  input[type="text"] {
+    border: 1px solid black;
+    height: 40px;
+  }
+  input[type="email"] {
+    border: 1px solid black;
+    height: 40px;
+  }
+}
