@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6vh;
+  height: 10vh;
   position: fixed;
   top: 0;
   width: 100%;
@@ -60,19 +60,18 @@ section {
 .headline {
   justify-content: space-around;
   height: 90vh;
+
   background: whitesmoke;
 }
 
 .headline-info > h1 {
   font-size: 7rem;
-  background: black;
   padding: 2rem;
-  color: white;
 }
 
 .headline-info > p {
   font-size: 2rem;
-  font-style: italic;
+  text-align: center;
 }
 
 .headline > img {
@@ -89,6 +88,7 @@ section {
   align-items: center;
   width: 50%;
   height: 100%;
+
   background: white;
 }
 
@@ -100,15 +100,14 @@ section {
 
 .story > p {
   padding: 2rem;
-  text-align: left;
+  text-align: justify;
   font-size: 20px;
-  line-height: 30px;
 }
 
 .story-illustration {
   height: 100%;
   width: 50%;
-  background: black;
+  background: orangered;
   object-fit: contain;
   display: flex;
   justify-content: center;
@@ -160,7 +159,7 @@ form {
   align-items: center;
   height: fit-content;
   width: 100%;
-  height: 33vh;
+  height: 50vh;
   padding: 10px;
 }
 
@@ -227,14 +226,17 @@ input {
   width: 100%;
   height: 50px;
   margin: 10px;
+  text-align: center;
 }
 
 button[type="submit"] {
-  width: 100%;
+  width: 90%;
   height: 40px;
   margin-top: 10px;
   font-size: 20px;
   border-radius: 100px;
+  border: 1px solid black;
+  outline: 5px solid white;
 }
 
 button:hover {
@@ -252,8 +254,9 @@ input:hover {
 }
 
 .contact {
-  background: whitesmoke;
-  height: 100vh;
+  background: black;
+  color: whitesmoke;
+  height: 90vh;
 }
 
 @media screen and (max-width: 900px) {
