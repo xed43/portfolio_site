@@ -22,7 +22,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
+  background: whitesmoke;
 }
 
 ul {
@@ -59,8 +59,6 @@ section {
 .headline {
   justify-content: space-around;
   height: 90vh;
-
-  background: whitesmoke;
 }
 
 .headline-info > h1 {
@@ -74,9 +72,10 @@ section {
 }
 
 .headline > img {
-  width: 50%;
-  height: fit-content;
-  padding: 20px;
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;
+  padding: 3rem;
   object-fit: contain;
 }
 
@@ -87,7 +86,6 @@ section {
   align-items: center;
   width: 50%;
   height: 100%;
-  background: white;
 }
 
 .story > h1 {
@@ -120,8 +118,8 @@ form {
 }
 
 /* img {
-  width: 30rem;
-  height: 30rem;
+width: 30rem;
+height: 30rem;
 } */
 
 .projects {
@@ -155,7 +153,8 @@ form {
   align-items: center;
   height: fit-content;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
+  object-fit: cover;
   padding: 5px;
 }
 
@@ -204,7 +203,6 @@ form {
 }
 
 .btn-container > button {
- 
   font-size: 15px;
   height: 50px;
   width: 150px;
@@ -213,8 +211,8 @@ form {
 }
 
 /* .btn-container > button:hover {
-  background: black;
-  color: white;
+background: black;
+color: white;
 } */
 
 form {
@@ -262,13 +260,12 @@ input:hover {
   height: 90vh;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .headline {
-    background: black;
     padding: 50px;
-    color: white;
     height: 70vh;
     margin: 0 auto;
+    border-bottom: 1px solid black;
   }
 
   .headline-img {
@@ -280,7 +277,7 @@ input:hover {
   }
 
   .story {
-    height: 100px;
+    height: 100%;
     line-height: 30px;
     width: 100%;
   }
@@ -297,9 +294,9 @@ input:hover {
     height: 100%;
   }
   /* .proj-2 {
-    background: white;
-    color: black;
-  } */
+  background: white;
+  color: black;
+} */
   .proj-1 > img,
   .proj-2 > img,
   .proj-3 > img {
@@ -326,10 +323,9 @@ input:hover {
   }
 
   /* a:hover {
-    color: black;
-  } */
+  color: black;
+} */
   .headline {
-    background: whitesmoke;
     color: black;
     width: 100%;
     height: 50vh;
@@ -351,6 +347,7 @@ input:hover {
   .headline-info > img {
     z-index: -999;
   }
+
   .story > p {
     font-size: 20px;
     padding-bottom: 20rem;
