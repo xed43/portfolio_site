@@ -86,7 +86,6 @@ form {
   align-items: center;
   height: 100vh;
   text-align: left;
-
   color: white;
 }
 
@@ -153,7 +152,7 @@ img {
 
 .projects {
   display: grid;
-  gap: 10px;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   height: fit-content;
   place-items: center;
@@ -296,17 +295,13 @@ button[type="submit"] {
   .story > p {
     padding-top: 30px;
     padding-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 4vw;
     line-height: 35px;
     width: fit-content;
     background-color: rgb(0, 0, 0);
     color: white;
     text-transform: uppercase;
     text-shadow: 0 2px 10px black;
-  }
-
-  .story > h1 {
-    margin-bottom: 1rem;
   }
 
   .projects {
@@ -343,5 +338,19 @@ button[type="submit"] {
   button[type="submit"] {
     width: 80vw;
     height: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .story > p {
+    font-size: 10px;
+    opacity: 0.8;
+  }
+  .headline-info > h1 {
+    font-size: 5rem;
+  }
+
+  .headline-info > p {
+    font-size: 2rem;
   }
 }
