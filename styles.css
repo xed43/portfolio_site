@@ -13,6 +13,10 @@ body {
     "header header"
     "main main"
     "footer footer";
+  background: url("assets/vectorHD.jpg") center center / cover;
+  background-size: 100rem;
+  font-family: "Bangers", cursive;
+  font-family: "Luckiest Guy", cursive;
 }
 
 .story-title {
@@ -28,9 +32,9 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
-  border-bottom: 1px solid black;
+  background: black;
   z-index: 9999;
+  opacity: 0.9;
 }
 
 ul {
@@ -40,13 +44,22 @@ ul {
 
 li {
   padding: 3vw;
-  font-size: 2rem;
-  transform: rotate(-20deg);
+  transform: rotate(-5deg);
+}
+
+li:hover {
+  transform: rotate(10deg);
 }
 
 a {
-  color: rgb(65, 65, 65);
+  color: rgb(255, 7, 108);
+  font-size: 2.8rem;
   text-decoration: none;
+}
+
+a:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(152, 3, 63);
 }
 
 main {
@@ -78,14 +91,15 @@ form {
 }
 
 .headline-info > h1 {
-  font-size: 7rem;
-  color: rgb(65, 65, 65);
-  border-bottom: 10px solid rgb(65, 65, 65);
+  font-size: 12rem;
+  color: rgb(255, 0, 102);
+  border-bottom: 10px solid rgb(0, 94, 255);
 }
 
 .headline-info > p {
-  font-size: 2rem;
-  color: rgb(65, 65, 65);
+  margin-top: 20px;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
 }
 
 .headline-img {
@@ -108,65 +122,94 @@ img {
 }
 
 .story {
-  background: white;
-  width: 80vw;
+  background: none;
+  width: 70vw;
   height: fit-content;
   padding: 2rem;
-  font-size: 2.3rem;
+  font-size: 1.5rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  border: 10px solid rgb(65, 65, 65);
+  border: 10px solid rgb(254, 3, 103);
+  opacity: 0.8;
+}
+
+.story > h1 {
+  color: rgb(255, 0, 102);
+  text-shadow: 0 8px 40px rgb(181, 4, 4);
 }
 
 .story > p {
   padding: 20px;
+  color: rgb(255, 255, 255);
+  background: black;
+  line-height: 45px;
+  font-size: 2vw;
+
+  letter-spacing: 0;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .projects {
   display: grid;
-  gap: 2rem;
+  gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   height: fit-content;
-
   place-items: center;
 }
 
 .proj-1 > img,
 .proj-2 > img,
-.proj-3 > img {
+.proj-3 > img,
+.proj-new-1 > img {
   width: 100%;
-  height: 70%;
-  object-fit: cover;
+  height: 50%;
+  object-fit: contain;
   transition: 2s ease-in-out;
 }
 
 .proj-1:hover,
 .proj-2:hover,
-.proj-3:hover {
+.proj-3:hover,
+.proj-new-1:hover {
   transition: 1s ease-in-out;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .proj-1,
 .proj-2,
-.proj-3 {
-  background: white;
-  padding: 5px;
+.proj-3,
+.proj-new-1 {
+  background: black;
+  color: rgb(244, 0, 98);
+  font-size: 1.3rem;
   height: fit-content;
   text-align: center;
+  text-transform: lowercase;
 }
 
 .btn-container > a {
-  border: 1px solid black;
-  padding: 10px;
-  background: black;
+  color: rgb(234, 233, 233);
+  font-size: 1.4rem;
+}
+
+.btn-container > a:hover {
+  background: rgb(255, 0, 102);
   color: white;
 }
 
 .info {
   padding: 3rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: whitesmoke;
+  background: black;
+  text-shadow: 0 2px 2px rgb(10, 5, 5);
+  letter-spacing: 2px;
 }
 
 section {
@@ -176,13 +219,26 @@ section {
 
 footer {
   grid-area: footer;
-
   height: 100vh;
   padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 4rem;
+  color: rgb(254, 3, 103);
+  text-shadow: 0 2px 1px rgb(8, 0, 0);
+  opacity: 0.9;
 }
 
 input {
@@ -199,6 +255,12 @@ button[type="submit"] {
   height: 50px;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
 @media screen and (max-width: 750px) {
   li {
     font-size: 1.5rem;
@@ -207,12 +269,12 @@ button[type="submit"] {
     text-align: center;
   }
   .headline-info > h1 {
-    font-size: 3.5rem;
+    font-size: 6.5rem;
     border: none;
   }
   .headline-info > p {
     padding-top: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding-bottom: 1rem;
     border-bottom: 5px solid rgb(65, 65, 65);
   }
@@ -226,10 +288,25 @@ button[type="submit"] {
   }
 
   .story {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.99;
+  }
+
+  .story > p {
     padding-top: 30px;
     padding-bottom: 0;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.2rem;
+    line-height: 35px;
+    width: fit-content;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px black;
+  }
+
+  .story > h1 {
+    margin-bottom: 1rem;
   }
 
   .projects {
@@ -238,10 +315,25 @@ button[type="submit"] {
   input {
     display: flex;
     flex-flow: column;
-    width: 50vw;
+    width: 80vw;
     height: 50px;
     margin-bottom: 10px;
     text-align: center;
+  }
+
+  header {
+    background: black;
+  }
+
+  a {
+    font-size: 5vw;
+    background: black;
+  }
+
+  li {
+    padding: 0 2vw;
+
+    transform: rotate(0deg);
   }
 
   form {
@@ -249,7 +341,7 @@ button[type="submit"] {
     flex-flow: column;
   }
   button[type="submit"] {
-    width: 50vw;
+    width: 80vw;
     height: 50px;
   }
 }
