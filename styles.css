@@ -2,27 +2,35 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+.story-title {
+  font-size: 3rem;
 }
 
 header {
+  grid-area: header;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 10vh;
   position: fixed;
   top: 0;
   width: 100%;
-  background: whitesmoke;
+  background: white;
+  border-bottom: 1px solid black;
+  z-index: 9999;
 }
 
 ul {
@@ -31,352 +39,217 @@ ul {
 }
 
 li {
-  padding: 0 1rem;
-  font-size: 1.5rem;
+  padding: 3vw;
+  font-size: 2rem;
+  transform: rotate(-20deg);
 }
 
 a {
+  color: rgb(65, 65, 65);
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
-  transition: 0.3s ease;
 }
 
-a:hover {
-  padding: 12px;
-  font-size: 1.6rem;
-  transition: 0.3s ease-in-out;
+main {
+  grid-area: main;
 }
 
-section {
-  height: 100vh;
-  width: 100vw;
+.contact {
+  padding-top: 5rem;
+  height: 90vh;
   display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
 
 .headline {
+  display: flex;
   justify-content: space-around;
-  height: 90vh;
+  align-items: center;
+  height: 100vh;
+  text-align: left;
+
+  color: white;
 }
 
 .headline-info > h1 {
   font-size: 7rem;
-  padding: 2rem;
+  color: rgb(65, 65, 65);
+  border-bottom: 10px solid rgb(65, 65, 65);
 }
 
 .headline-info > p {
   font-size: 2rem;
-  text-align: center;
+  color: rgb(65, 65, 65);
 }
 
-.headline > img {
-  width: 450px;
-  height: 450px;
+.headline-img {
+  width: 250px;
+  height: 250px;
   border-radius: 100%;
-  padding: 3rem;
-  object-fit: contain;
+}
+
+img {
+  width: 250px;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  height: 100vh;
 }
 
 .story {
+  background: white;
+  width: 80vw;
+  height: fit-content;
+  padding: 2rem;
+  font-size: 2.3rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 100%;
-}
-
-.story > h1 {
-  font-size: 2.5rem;
-  padding: 30px;
-  text-align: center;
+  border: 10px solid rgb(65, 65, 65);
 }
 
 .story > p {
-  padding: 2rem;
-  text-align: justify;
-  font-size: 20px;
+  padding: 20px;
 }
-
-.story-illustration {
-  height: 100%;
-  width: 50%;
-  object-fit: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -9999;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: inherit;
-}
-
-/* img {
-width: 30rem;
-height: 30rem;
-} */
 
 .projects {
-  display: flex;
-  flex-flow: column;
-  height: auto;
-  width: 100vw;
-}
-
-.projects-heading {
-  font-size: 4rem;
-  padding: 10rem;
-}
-
-.title {
-  text-align: center;
-  padding: 30px;
-  text-transform: uppercase;
-}
-
-.info {
-  padding: 0 30px 30px 30px;
-  font-size: 1.3rem;
-}
-
-.proj-1,
-.proj-2,
-.proj-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   height: fit-content;
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
-  padding: 5px;
+
+  place-items: center;
 }
 
 .proj-1 > img,
 .proj-2 > img,
 .proj-3 > img {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  transition: 2s ease-in-out;
 }
 
-.proj-1 {
-  background: whitesmoke;
+.proj-1:hover,
+.proj-2:hover,
+.proj-3:hover {
+  transition: 1s ease-in-out;
+  transform: scale(1.1);
 }
 
-.proj-2 {
-  flex-flow: row-reverse;
-
-  font-size: 18px;
-}
-
-.proj-1-info,
-.proj-2-info,
-.proj-3-info {
-  padding: 30px;
-  text-align: justify;
-  width: 75%;
+.proj-1,
+.proj-2,
+.proj-3 {
+  background: white;
+  padding: 5px;
+  height: fit-content;
   text-align: center;
-  padding-bottom: 4rem;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-  border-radius: 50px;
-  height: auto;
-  width: 80%;
-}
-
-.btn-container > button:hover {
+.btn-container > a {
+  border: 1px solid black;
+  padding: 10px;
   background: black;
-  height: 50px;
-  width: 160px;
-  font-size: 15px;
+  color: white;
 }
 
-.btn-container > button {
-  font-size: 15px;
-  height: 50px;
-  width: 150px;
-  border-radius: 100px;
-  border: none;
+.info {
+  padding: 3rem;
 }
 
-/* .btn-container > button:hover {
-background: black;
-color: white;
-} */
+section {
+  height: auto;
+  padding: 20px;
+}
 
-form {
+footer {
+  grid-area: footer;
+
+  height: 100vh;
+  padding-top: 3rem;
   display: flex;
-  flex-flow: column;
-  align-items: center;
   justify-content: center;
-  width: 50%;
+  align-items: center;
+  font-size: 3rem;
 }
 
 input {
-  width: 100%;
+  display: flex;
+  flex-flow: column;
+  width: 50vw;
   height: 50px;
-  margin: 10px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 button[type="submit"] {
-  width: 100%;
-  height: 40px;
-  margin-top: 20px;
-  font-size: 20px;
-  border-radius: 100px;
-  border: 1px solid black;
-  outline: 5px solid white;
+  width: 50vw;
+  height: 50px;
 }
 
-button:hover {
-  color: white;
-  background: black;
-}
-
-.form-heading {
-  font-size: 3rem;
-}
-
-input:hover {
-  background: rgb(225, 223, 223);
-  border-radius: 2px;
-}
-
-.contact {
-  background: whitesmoke;
-  color: black;
-  height: 90vh;
-}
-
-@media screen and (max-width: 1200px) {
-  .headline {
-    padding: 50px;
-    height: 70vh;
-    margin: 0 auto;
-    border-bottom: 1px solid black;
+@media screen and (max-width: 750px) {
+  li {
+    font-size: 1.5rem;
   }
-
-  .headline-img {
-    display: none;
-  }
-
-  .headline-info > p {
+  .headline-info {
     text-align: center;
   }
-
-  .story {
-    height: 100%;
-    line-height: 30px;
-    width: 100%;
-  }
-  .story-illustration {
-    display: none;
-  }
-  .proj-1,
-  .proj-2,
-  .proj-3 {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  /* .proj-2 {
-  background: white;
-  color: black;
-} */
-  .proj-1 > img,
-  .proj-2 > img,
-  .proj-3 > img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .btn-container {
-    display: flex;
-    flex-flow: column;
-  }
-  button {
-    margin-bottom: 10px;
-  }
-  button[type="submit"] {
+  .headline-info > h1 {
+    font-size: 3.5rem;
     border: none;
   }
-}
-
-@media screen and (max-width: 650px) {
-  header {
-    background: white;
+  .headline-info > p {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid rgb(65, 65, 65);
+  }
+  .headline-img {
+    height: 200px;
+    width: 200px;
   }
 
-  /* a:hover {
-  color: black;
-} */
-  .headline {
-    color: black;
-    width: 100%;
-    height: 50vh;
-    margin: 0 auto;
-    padding-top: 5rem;
-    text-align: center;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .headline-info > h1 {
-    font-size: 100px;
-    background: none;
-    color: black;
-  }
-
-  .headline-info > img {
-    z-index: -999;
-  }
-
-  .story > p {
-    font-size: 20px;
-    padding-bottom: 20rem;
-  }
-  .story > h1 {
-    margin-top: 20rem;
-  }
   .about {
     height: 100vh;
   }
-  .projects {
-    height: auto;
-    padding-top: 5rem;
+
+  .story {
+    padding-top: 30px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
   }
-  .btn-container {
+
+  .projects {
+    padding-top: 2rem;
+  }
+  input {
+    display: flex;
+    flex-flow: column;
+    width: 50vw;
+    height: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  form {
     display: flex;
     flex-flow: column;
   }
-  .btn-container > button {
-    margin: 5px;
-    border: none;
-  }
-
-  .proj-1-info,
-  .proj-2-info,
-  .proj-3-info {
-    width: 100%;
-  }
-  form {
-    width: 80%;
+  button[type="submit"] {
+    width: 50vw;
+    height: 50px;
   }
 }
